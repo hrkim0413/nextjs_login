@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+header {
+  padding: 10px 0;
+}
+
+header h1 {
+  text-align: center;
+}
+
+main {
+  padding: 20px 0;
+}
+
+footer {
+  background: var(--base_txt_color);
+  color: #fff;
+}
+
+footer .copyright {
+  padding: 20px 0;
+  text-align: center;
+}
