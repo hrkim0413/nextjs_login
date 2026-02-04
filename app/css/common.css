@@ -1,17 +1,107 @@
 @charset "utf-8";
 
-header {
+/* common */
+.inner {
+  position: relative;
+  width: 96%;
+  margin: auto;
   padding: 10px 0;
 }
 
-header h1 {
+/* body */
+body {
+  overflow: hidden;
+}
+
+/* header */
+header {
+  background: #000;
+}
+
+header>.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .log-btn,
+header .menu-btn,
+nav .close-btn {
+  display: inline-block;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* nav */
+nav {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  transition: 0.5s;
+}
+
+nav.act {
+  left: 0;
+}
+
+nav .inner {
+  padding: 80px 0;
+}
+
+nav .close-btn {
+  position: absolute;
+  top: 26px;
+  left: 0;
+}
+
+nav .gnb {
+  margin-bottom: 20px;
+}
+
+nav .gnb li {
+  padding: 6px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+}
+
+nav .gnb li:last-child {
+  border-bottom: none;
+}
+
+nav .bt-menu {
+  display: flex;
+}
+
+nav .bt-menu li {
+  flex: 1;
+  background: #ccc;
+  border-right: 1px solid #333;
   text-align: center;
 }
 
+nav .bt-menu li:nth-child(2n) {
+  border-right: none;
+}
+
+nav .bt-menu li a {
+  display: block;
+  padding: 10px;
+}
+
+/* main */
 main {
   padding: 20px 0;
 }
 
+/* footer */
 footer {
   background: var(--base_txt_color);
   color: #fff;
